@@ -156,3 +156,8 @@ SELECT * FROM canais;
 SELECT * FROM videos;
 DELETE FROM videos_canais WHERE id_canais_video = 5;
 SELECT * FROM videos_canais;
+SELECT * FROM videos_canais JOIN videos;
+SELECT * FROM videos_canais JOIN videos ON videos_canais.fk_video = videos.id_video;
+SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_video = v.id_video;
+SELECT * FROM videos_canais AS vc JOIN videos AS v ON vc.fk_video = v.id_video
+JOIN canais AS c ON vc.fk_canal = c.id_canal;

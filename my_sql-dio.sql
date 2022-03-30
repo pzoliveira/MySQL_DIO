@@ -169,3 +169,9 @@ SELECT * FROM videos_canais AS vc RIGHT OUTER JOIN videos AS v ON vc.fk_video = 
 SELECT * FROM videos AS v LEFT OUTER JOIN videos_canais AS vc ON vc.fk_video = v.id_video;
 SELECT * FROM videos_canais AS vc RIGHT OUTER JOIN canais AS c ON vc.fk_canal = c.id_canal;
 SELECT * FROM canais AS c LEFT OUTER JOIN videos_canais AS vc ON vc.fk_canal = c.id_canal;
+INSERT INTO canais (id_canal, nome_canal) VALUES (4, 'HTML');
+SELECT * FROM canais;
+INSERT INTO videos_canais (id_canais_video, fk_canal, fk_video) VALUES (5, 4, 5);
+SELECT * FROM videos_canais;
+SELECT * FROM videos_canais JOIN videos ON videos_canais.fk_video = videos.id_video
+JOIN canais ON videos_canais.fk_canal = canais.id_canal;
